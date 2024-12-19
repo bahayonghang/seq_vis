@@ -5,7 +5,7 @@ from app.utils.plotter import plot_train_results, plot_test_results
 
 router = APIRouter()
 
-@router.post("/plot/train")
+@router.post("/plot_test_train")
 async def plot_train(folder_path: str = Form(...)):
     folder = Path(folder_path)
     if not folder.exists():
@@ -16,7 +16,7 @@ async def plot_train(folder_path: str = Form(...)):
     except Exception as e:
         return {"error": str(e)}
 
-@router.post("/plot/test")
+@router.post("/plot_test")
 async def plot_test(folder_path: str = Form(...)):
     folder = Path(folder_path)
     if not folder.exists():

@@ -1,17 +1,16 @@
 <template>
-    <div id="app">
-      <h1>Result Plotter</h1>
-      <Plotter />
-    </div>
-  </template>
-  
-  <script>
-  import Plotter from './components/Plotter.vue';
-  
-  export default {
-    components: {
-      Plotter,
-    },
-  };
-  </script>
-  
+  <div id="app">
+    <ImagePlotViewer />
+  </div>
+</template>
+
+<script>
+import ImagePlotViewer from './components/ImagePlotViewer.vue';
+
+export default {
+  name: 'App',
+  components: {
+    ImagePlotViewer
+  }
+};
+</script>
